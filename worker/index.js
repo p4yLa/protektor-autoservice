@@ -148,10 +148,11 @@ async function handleBooking(d, env, origin, now) {
     ];
     if (comment) lines.push('', '💬 ' + esc(comment));
     // Запись уже в базе. Если Telegram не ответил — не пугаем клиента ошибкой.
-    if (env.BOT_TOKEN) await telegram(env, lines.join('\n')).catch(() => false);
+    // notified — дошло ли сообщение до Telegram (видно в ответе, удобно для проверки)
+    const notified = env.BOT_TOKEN ? await telegram(env, lines.join('\n')).catch(() => false) : false;
 
     return json({
-      ok: true, id, post: post.name, long: pl.long, dur: est.dur,
+      ok: true, id, post: post.name, long: pl.long, dur: est.dur, notified,
       estimate: { min: est.totalMin, max: est.totalMax, laborMin: est.laborMin, laborMax: est.laborMax }
     }, 200, origin);
   }

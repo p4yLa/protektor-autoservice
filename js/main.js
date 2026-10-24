@@ -13,7 +13,7 @@
 
   // Адрес Cloudflare Worker (см. worker/). Пустая строка — демо-режим:
   // цена и свободное время считаются в браузере, заявки никуда не уходят.
-  var LEAD_ENDPOINT = '';
+  var LEAD_ENDPOINT = 'https://protektor-booking.p4yla.workers.dev';
   // Ссылки на мессенджеры сервиса. Пусто — в демо по клику показываем подсказку.
   var LINKS = { Telegram: '', WhatsApp: '', 'ВКонтакте': '', MAX: '' };
   var PHONE = '+7 (495) 790-43-12';
