@@ -1,0 +1,11 @@
+# Настройки Cloudflare Worker. Секреты сюда НЕ пишем — только через `wrangler secret put`.
+name = "protektor-booking"
+main = "index.js"
+compatibility_date = "2026-10-01"
+
+# База записей (Cloudflare D1, SQLite). В коде доступна как env.DB.
+# database_id появится после `npx wrangler d1 create protektor` — вставьте его сюда.
+[[d1_databases]]
+binding = "DB"
+database_name = "protektor"
+database_id = "00000000-0000-0000-0000-000000000000"

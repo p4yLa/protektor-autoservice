@@ -1,0 +1,6 @@
+{
+  "name": "protektor-booking",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker автосервиса «Протектор»: расписание постов, запись, заявки в Telegram"
+}
