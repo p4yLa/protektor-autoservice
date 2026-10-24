@@ -148,7 +148,14 @@ const woff2 = await subsetFont(fs.readFileSync('GolosText[wght].ttf'), 'все �
 
 ## Проверки и замеры
 
-**Lighthouse 12**, мобильный профиль, 3 прогона, локальный сервер без сжатия (на GitHub Pages с gzip цифры обычно не хуже). Сдвиг вёрстки на главной — 0:
+**Lighthouse 13.5** — опубликованный сайт, GitHub Pages (https://p4yla.github.io/protektor-autoservice/), мобильный профиль Lighthouse 13.5, дата 2026-10-25. По 3 прогона каждой страницы, в таблице медианы:
+
+| | Performance | Accessibility | Best Practices | SEO | FCP | LCP | CLS |
+|---|---|---|---|---|---|---|---|
+| Главная | 100 | 100 | 100 | 100 | 1,0 с | 1,6 с | 0 |
+| Политика | 100 | 100 | 100 | 100 | 1,2 с | 1,2 с | 0,021 |
+
+Раньше, локально: Lighthouse 12, мобильный профиль, 3 прогона, локальный сервер без сжатия. Сдвиг вёрстки на главной — 0:
 
 | | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
